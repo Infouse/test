@@ -1,0 +1,59 @@
+body{height:5000px;}
+
+.fixed{
+    background-color: red;
+    color:white;
+    padding:60px;
+    position: fixed;
+    right:0; top:0;
+    z-index: 2;
+}
+
+.absolute{
+    background-color: blue;
+    color:white;
+    padding:200px;
+    position: absolute;
+    right:0%; bottom:0%;    
+    z-index: 3;
+}
+
+
+.relative-absolute{
+    top:1000px;
+    position: relative;
+    background-color: yellow;
+    padding:100px;
+}
+.relative-absolute p{
+    position: absolute;
+    left:0; top:0;
+    z-index: 10;
+}
+
+.stickey{
+    margin-top:1200px;
+}
+
+.stickey .ex{
+    background-color: beige;
+    height:800px;
+}
+.stickey .ex p{
+    padding:50px;
+    background-color: green;
+    position: sticky;
+    top:0;
+}
+.stickey .ex p:nth-child(1){
+    top:0;
+    background-color: green;
+}
+.stickey .ex p:nth-child(2){
+    top:20px;
+    background-color: rgb(209, 157, 53);
+}
+.stickey .ex p:nth-child(3){
+    top:40px;
+    background-color: rgb(90, 159, 249);
+}

@@ -1,0 +1,55 @@
+// nesting.scss
+$w: 1400px;
+
+//정의
+@mixin flex($h,$v:center){
+    display: flex;
+    align-items: $h;
+    justify-content: $v;
+    @content;
+}
+//사용
+
+
+
+
+
+
+
+
+a{
+    text-decoration: none;
+    color:#333;    
+}
+header{
+    width:100%;
+    >div{
+        width:$w;
+        margin:0 auto;
+        @include flex(center,space-between){
+            flex-direction: column;
+        };
+        >h1{
+            a{}
+        }
+        >nav{
+            a{
+                display: inline-block;
+                padding:20px;
+                position: relative;
+                &::after{
+                    content:'';
+                    position: absolute;
+                    left:50%; top:100%;
+                    width:0%;
+                    border-bottom:3px solid #000;
+                    transition: 0.5s;
+                }
+                &:hover::after{
+                    left:0%;
+                    width:100%;
+                }
+            }
+        }
+    }
+}

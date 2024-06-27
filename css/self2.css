@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+html {
+    background-color: #eee;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #757575;
+    line-height: 150%;
+}
+
+* { box-sizing: border-box; }
+
+.test-1 {
+    width: 1440px;
+    margin: 100px auto;
+    padding: 80px 120px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.test-1 .info { width: 50%; }
+.test-1 .info>p:nth-of-type(1) {}
+.test-1 .info>b {
+    font-size: 48px;
+    color: #212121;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.test-1 .info>p:nth-of-type(2) { margin: 30px 0;}
+.test-1 .info>a {
+    width: 50%;
+    color:#3563E9;
+    font-size:16px;
+    text-decoration: none;
+}
+.test-1 .info>a::after {
+    content:'';
+    width:10px; height:10px;
+    display: inline-block;
+    background: url('./img/arrow.svg') 0 0 / 5px no-repeat;
+}
+
+.test-1 .photo { 
+    width: 50%; height:370px;
+    overflow: hidden;
+}
+.test-1 .photo>img { 
+    width: 100%; 
+    transition: .3s;
+}
+
+.test-1:hover .photo>img { 
+    /* width: 200%;  */
+    transform: scale(2);
+}
+
+.test-1 .photo{
+    position:relative;
+}
+.test-1 .photo figcaption{
+    position: absolute;
+    left:0; bottom:-100px;
+    z-index:2;
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white;
+    width:100%;
+    padding:20px 0;
+    text-align: center;
+    transition: .5s;
+}
+.test-1 .photo:hover figcaption{
+    bottom:0;
+}
+
+
+/* test-2 */
+p, figure{margin:0;}
+
+.test-2{
+    width:920px; margin:100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: white;
+    padding:60px;
+}
+.test-2 figure{
+    width:50%;
+    padding:20px;
+}
+.test-2 figure > p{}
+.test-2 figure > p > img{width:100%;}
+.test-2 figure > figcaption{
+    padding-top:20px;
+}
+.test-2 figure > figcaption > b{
+    text-transform: capitalize;
+    color:#333; font-size:24px;
+}
+.test-2 figure > figcaption > p{margin-top:20px;}
+
+
+
+/* test-3 */
+.test-3{
+    background-color: white;
+}
+.test-3>ul{
+    list-style: none;
+    margin:100px auto;padding:0;
+    width:500px;
+    padding:40px;
+}
+.test-3>ul>li{}
+.test-3>ul>li> div{
+    background-color: yellow;
+    transition: 0.5s;
+    height:0px; overflow: hidden;
+}
+.test-3>ul>li:hover> div{
+    height:100px;
+}
+.test-3>ul>li::before{
+    content:'add';
+    
+    color:blue;
+    font-size:36px;
+}
+
